@@ -1,0 +1,16 @@
+{
+  "author": "Paul Serby <paul@serby.net>",
+  "name": "flow-control-examples",
+  "description": "Different approaches to solving common async flow control problems",
+  "version": "0.0.0",
+  "repository": {
+    "url": ""
+  },
+  "engines": {
+    "node": "~0.6"
+  },
+  "dependencies": {
+    "async": "~0.1"
+  },
+  "devDependencies": {}
+}
