@@ -3,7 +3,7 @@ var
   theUser = require('../../lib/user');
 
 // Add the filename for your implementation here
-['sync', 'basic', 'step', 'async-map', 'async-detect'].forEach(function(implementation) {
+['sync', 'basic', 'step', 'async-map', 'async-detect', 'none'].forEach(function(implementation) {
 
   var findMe = require('../' + implementation).findMe;
 
