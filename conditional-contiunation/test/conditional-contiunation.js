@@ -1,13 +1,14 @@
-var
-  assert = require('assert'),
-  theUser = require('../../lib/user');
+var fs = require('fs')
+  , assert = require('assert')
+  , theUser = require(__dirname + '/../lib/user')
+  , methodsPath = __dirname + '/../methods';
 
 // Add the filename for your implementation here
-['sync', 'basic', 'step', 'async-map', 'async-detect', 'none'].forEach(function(implementation) {
+fs.readdirSync(methodsPath).forEach(function(implementation) {
 
-  var findMe = require('../' + implementation).findMe;
+  var findMe = require(methodsPath + '/' + implementation).findMe;
 
-  describe(implementation + '#findMe', function() {
+  describe(implementation.replace('.js', '') + '#findMe', function() {
     it('should be able to find by name', function(done) {
       findMe({ name: 'Paul Serby'}, function(error, user) {
         user.should.equal(theUser);
