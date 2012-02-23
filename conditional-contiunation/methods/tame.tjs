@@ -1,0 +1,22 @@
+var userModel = require('../lib/userModel.js').createUserModel();
+
+module.exports.findMe = function(user, callback) {
+	var error, result;
+
+	await userModel.findByEmail(user.email, defer(error, result));	
+	if (error || result) {
+		return callback(error, result);
+	}
+
+	await userModel.findByName(user.name, defer(error, result));
+	if (error || result) {
+		return callback(error, result);
+	}
+
+	await userModel.findByGithub(user.github, defer(error, result));
+	if (error || result) {
+		return callback(error, result);
+	}
+	
+	return callback (undefined, null);
+};
