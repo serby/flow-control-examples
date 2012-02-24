@@ -5,8 +5,8 @@ var fs = require('fs')
 
 // Add the filename for your implementation here
 fs.readdirSync(methodsPath)
-  .filter(function(file) { 
-    return /\.js$/.test(file);
+  .filter(function(file) {
+    return (/\.js$/).test(file);
   })
   .forEach(function(implementation) {
     var findMe = require(methodsPath + '/' + implementation).findMe;
