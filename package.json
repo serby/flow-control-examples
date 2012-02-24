@@ -12,7 +12,8 @@
   "dependencies": {
     "step": "~0.0",
     "async": "~0.1",
-    "jangle": "~0.0"
+    "jangle": "~0.0",
+    "tamejs": "~0.4"
   },
   "devDependencies": {
     "mocha": "~0.11",
